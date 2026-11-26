@@ -1,0 +1,49 @@
+/* GlobalActions, ShutdownThread and the boot animation of the IMM76I (Galaxy Nexus) image (dp scaled by 0.9; the xhdpi art of its
+   framework-res, dialog_full_holo_dark's 9-patch cut at 20 px). The dialog window is
+   Theme.Holo.Dialog.Alert: 95% of the portrait width, dialog_full_holo_dark with 8dp of shadow padding, dimmed 0.6
+   behind it (the status and navigation bars sit above the keyguard dialog layer and stay undimmed). */
+.ga-scrim{position:absolute;left:0;right:0;top:var(--ga-top,calc(28.2353 * var(--dp)));bottom:var(--ga-bottom,calc(55.2942 * var(--dp)));z-index:40;background:#00000099}
+.ga-dialog{position:absolute;z-index:41;inset:0;margin:auto;height:fit-content;width:95%;max-height:calc(100% - calc(105.8824 * var(--dp)));overflow:hidden;border:calc(8.4706 * var(--dp)) solid transparent;border-image:url('assets/ga-dialog_full_holo_dark.png') 20 fill/calc(10.5883 * var(--dp)) stretch;color:#f3f3f3;font-family:Roboto,RobotoICS,sans-serif}
+.ga-list{padding:0 calc(8.4706 * var(--dp));display:flex;flex-direction:column;min-height:calc(67.7648 * var(--dp))}
+.ga-list>*+*{box-shadow:inset 0 calc(1.1765 * var(--dp)) #ffffff26}
+/* global_actions_item.xml (4.0.4): listPreferredItemHeight 64dp, 16dp left padding, the icon at its own 32dp width with
+   16dp after it (4.1 moved it into a 56dp box), and 22sp / 14sp text. */
+.ga-item{display:flex;align-items:center;min-height:calc(67.7648 * var(--dp));width:100%;padding:calc(6.353 * var(--dp)) 0 calc(6.353 * var(--dp)) calc(16.9412 * var(--dp));border:0;background:none;text-align:left;color:inherit;font:inherit}
+.ga-item:active,.ga-option:active{background-color:#33b5e599}
+.ga-icon{flex:none;align-self:stretch;margin-right:calc(16.9412 * var(--dp));display:grid;place-items:center}
+.ga-icon img{width:calc(33.8824 * var(--dp));height:calc(33.8824 * var(--dp))}
+.ga-text{flex:1;min-width:0;display:flex;flex-direction:column}
+.ga-message{font-size:calc(23.2942 * var(--dp));line-height:1.3;color:#f3f3f3}
+.ga-status{font-size:calc(14.8236 * var(--dp));line-height:1.3;min-height:calc(27.5295 * var(--dp));color:#bebebe}
+/* global_actions_silent_mode.xml: three 64dp actionBarItemBackground cells with spacers; the selected icon carries
+   tab_selected_holo (its bottom 6dp are holo blue). */
+.ga-silent{display:flex;min-height:calc(67.7648 * var(--dp))}
+.ga-silent>i{flex:1}
+.ga-option{flex:none;width:calc(67.7648 * var(--dp));padding:calc(6.353 * var(--dp)) calc(8.4706 * var(--dp));border:0;background:none;display:flex}
+.ga-indicator{flex:1;display:grid;place-items:center}
+.ga-indicator img{width:calc(33.8824 * var(--dp));height:calc(33.8824 * var(--dp))}
+.ga-option[aria-checked="true"] .ga-indicator{background:linear-gradient(#33b5e5,#33b5e5) bottom/100% calc(6.353 * var(--dp)) no-repeat}
+/* alert_dialog_holo.xml: 64dp title row in 22sp holo blue over a 2dp divider, 18sp message, 48dp button bar. */
+.ga-alert{padding:0 calc(8.4706 * var(--dp))}
+.ga-title{margin:0 calc(16.9412 * var(--dp));line-height:calc(67.7648 * var(--dp));font-size:calc(23.2942 * var(--dp));font-weight:400;color:#33b5e5;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ga-title+*{border-top:calc(2.1177 * var(--dp)) solid #33b5e5}
+.ga-body{margin:0;min-height:calc(67.7648 * var(--dp));padding:calc(8.4706 * var(--dp)) calc(16.9412 * var(--dp));font-size:calc(19.0589 * var(--dp));line-height:1.35;color:#f3f3f3}
+.ga-buttons{display:flex;min-height:calc(50.8236 * var(--dp));box-shadow:inset 0 calc(1.1765 * var(--dp)) #ffffff26}
+.ga-buttons button{flex:1;min-height:calc(50.8236 * var(--dp));border:0;background:none;color:#f3f3f3;font:calc(14.8236 * var(--dp)) Roboto,RobotoICS,sans-serif;padding:0 calc(8.4706 * var(--dp))}
+.ga-buttons button+button{box-shadow:inset calc(1.1765 * var(--dp)) 0 #ffffff26}
+.ga-buttons button:active{background:#33b5e599}
+/* progress_dialog_holo.xml: 16dp padding, the 48dp progress_medium_holo spinner, then the message (textAppearanceSmall). */
+.ga-progress{display:flex;align-items:center;min-height:calc(67.7648 * var(--dp));padding:calc(16.9412 * var(--dp));font-size:calc(14.8236 * var(--dp));color:#bebebe}
+.ga-spinner{position:relative;flex:none;width:calc(50.8236 * var(--dp));height:calc(50.8236 * var(--dp));margin-right:calc(16.9412 * var(--dp))}
+.ga-spinner img{position:absolute;inset:0;width:100%;height:100%;animation:ga-outer 3.5s linear infinite}
+.ga-spinner img+img{animation-name:ga-inner}
+@keyframes ga-outer{to{transform:rotate(1080deg)}}
+@keyframes ga-inner{from{transform:rotate(720deg)}to{transform:rotate(0)}}
+/* Powered off, booting and the safe mode watermark sit above every window, including the status and navigation bars. */
+#power-layer{position:absolute;inset:0;z-index:90;pointer-events:none}
+#power-layer>.ga-off,#power-layer>.ga-boot{position:absolute;inset:0;background:#000;pointer-events:auto}
+.ga-boot{overflow:hidden}
+.ga-boot-frame{position:absolute;background-repeat:no-repeat}
+.ga-safe-mode{position:absolute;left:0;bottom:0;padding:calc(3.1765 * var(--dp));background:#00000060;color:#ffffff80;font:calc(23.2942 * var(--dp)) Roboto,RobotoICS,sans-serif}
+.power-key{cursor:pointer;z-index:1}
+.power-key::before{content:"";position:absolute;inset:-6px -10px -6px -4px}

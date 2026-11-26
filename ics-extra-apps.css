@@ -1,0 +1,129 @@
+/* Nexus 4 extras (ics-extra-apps.js): the KitKat simulator's kk-extra-apps.css at 1 dp = 0.8516 px, plus tiles and tabs. */
+.kkx-app{display:flex;flex-direction:column;background:#f2f2f2;color:#222;font-family:Roboto,RobotoICS,sans-serif}
+/* Navigation (Maps 6.4, audit step 4): Theme.Holo's black, the da_actionBar (47 dp, da_action_bar_background: #f3f3f3
+   to #dcdcdc between #d5d5d5 and #ababab lines), the tiles (da_action_button_normal, 320 dpi x .4258). */
+.nav64{background:#000;display:flex;flex-direction:column}
+.nav-head{flex:none;display:flex;align-items:center;height:calc(47.0942 * var(--dp));background:linear-gradient(#f3f3f3,#dcdcdc);border-top:var(--dp) solid #d5d5d5;border-bottom:var(--dp) solid #ababab}
+.nav-switch{display:flex;align-items:center;padding:0 0 0 calc(2 * var(--dp))}
+.nav-switch img:first-child{width:calc(42.5765 * var(--dp));height:calc(42.5765 * var(--dp))}
+.nav-switch img+img{width:calc(13.5295 * var(--dp));height:calc(8.0118 * var(--dp));margin-right:calc(4.0118 * var(--dp))}
+.nav-head i{flex:none;width:var(--dp);height:100%;background:#fff;box-shadow:calc(-1 * var(--dp)) 0 #0000001f}
+.nav-head b{flex:1;padding-left:calc(12.0236 * var(--dp));font:700 calc(16.0353 * var(--dp)) Roboto,sans-serif;color:#000}
+.screen .nav-head button{display:flex;align-items:center;height:100%;padding:0 calc(6.0118 * var(--dp)) 0 calc(4.0118 * var(--dp));border:0;background:none;font:700 calc(16.0353 * var(--dp)) Roboto,sans-serif;color:#000}
+.nav-head button img{width:calc(33.0589 * var(--dp));height:calc(33.0589 * var(--dp));margin-right:calc(2 * var(--dp))}
+.nav-tiles{display:grid;grid-template-columns:1fr 1fr;gap:calc(2 * var(--dp));padding:calc(2 * var(--dp))}
+.screen .nav-tile{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:calc(4.0118 * var(--dp));height:calc(100.1883 * var(--dp));padding:0;border-style:solid;border-width:calc(10.5177 * var(--dp)) calc(10.0236 * var(--dp)) calc(10.5177 * var(--dp)) calc(11.0236 * var(--dp));border-image:url('assets/nav-da_action_button_normal.png') 21 20 21 22 fill/calc(10.5177 * var(--dp)) calc(10.0236 * var(--dp)) calc(10.5177 * var(--dp)) calc(11.0236 * var(--dp));background:none;font:400 calc(13.0236 * var(--dp)) Roboto,sans-serif;color:#ccc}
+.nav-tile img{width:calc(30.0589 * var(--dp));height:calc(30.0589 * var(--dp))}
+.screen .nav-tile:active{filter:brightness(1.3)}
+
+/* Places (Maps 6.4, audit step 4): 240 dpi drawables x .5677, 320 dpi x .4258; the textures tile at 320 dpi. */
+.loc64{display:flex;flex-direction:column;background:#fafcfe url('assets/loc-primary_background_texture.png') 0 0/calc(10.5177 * var(--dp))}
+.loc-bar{flex:none;display:flex;align-items:center;height:calc(45.0824 * var(--dp));background:url('assets/loc-actionbar_background.png') 0 0/100% 100%}
+.loc-switch{display:flex;align-items:center;padding:0 calc(4.0118 * var(--dp))}
+.loc-switch img:first-child{width:calc(42.5765 * var(--dp));height:calc(42.5765 * var(--dp))}
+.loc-switch img+img{width:calc(13.5295 * var(--dp));height:calc(8.0118 * var(--dp))}
+.loc-bar i{flex:none;width:calc(1.3412 * var(--dp));height:100%;background:url('assets/loc-actionbar_seperator.png') 0 0/100% 100%}
+.loc-bar b{flex:1;padding-left:calc(5.0118 * var(--dp));font:400 calc(22.0353 * var(--dp)) Roboto,sans-serif;color:#000}
+.screen .loc-bar button{width:calc(44.0824 * var(--dp));height:calc(44.0824 * var(--dp));padding:0;border:0;background:none}
+.loc-bar button img{width:calc(44.0824 * var(--dp));height:calc(44.0824 * var(--dp))}
+.loc-where{flex:none;display:flex;align-items:center;gap:calc(8.0118 * var(--dp));height:calc(48.0942 * var(--dp));padding:0 calc(10.0236 * var(--dp));background:#748389 url('assets/loc-secondary_background_texture.png') 0 0/calc(10.5177 * var(--dp));font:400 calc(16.0353 * var(--dp)) Roboto,sans-serif;color:#fff}
+.loc-where img:first-child{width:calc(10.6824 * var(--dp));height:calc(10.6824 * var(--dp))}
+.loc-where span{flex:1}
+.loc-where img:last-child{width:calc(8.0118 * var(--dp));height:calc(8.0118 * var(--dp))}
+.loc-cats{display:grid;grid-template-columns:repeat(4,1fr);gap:0 calc(8.0118 * var(--dp));padding:calc(12.0236 * var(--dp)) calc(8.0118 * var(--dp)) calc(14.0236 * var(--dp))}
+.screen .loc-cats button{display:flex;flex-direction:column;align-items:center;gap:calc(2 * var(--dp));margin-bottom:calc(4.0118 * var(--dp));padding:0;border:0;background:none;font:400 calc(12.0236 * var(--dp)) Roboto,sans-serif;color:#000;white-space:nowrap;overflow:hidden}
+.loc-cats img{width:calc(54.1059 * var(--dp));height:calc(54.1059 * var(--dp))}
+.loc-cats span{max-width:100%;overflow:hidden;text-overflow:ellipsis}
+
+/* Movie Studio (AOSP VideoEditor 4.0.4, audit step 4). */
+.ms43{position:relative;background:#040505 url('assets/ms-activity_background.png') center/cover no-repeat}
+.ms-bar{position:absolute;left:0;right:0;top:0;display:flex;align-items:center;height:calc(48.0942 * var(--dp));padding-left:calc(8.0118 * var(--dp));background:#222;border-top:var(--dp) solid #2d2d2d;z-index:2}
+.ms-bar img{width:calc(32.0589 * var(--dp));height:calc(32.0589 * var(--dp))}
+.ms-grid{display:flex;flex-direction:column;align-items:center;padding-top:calc(65.1295 * var(--dp))}
+.screen .ms-item{display:block;padding:calc(17.0353 * var(--dp)) calc(9.0118 * var(--dp));border:0;background:none}
+.ms-thumb{position:relative;display:grid;place-items:center;width:calc(300.5648 * var(--dp));height:calc(150.2824 * var(--dp));background:#000}
+.ms-thumb img{width:calc(64.1177 * var(--dp));height:calc(64.1177 * var(--dp))}
+.ms-thumb b{position:absolute;left:0;right:0;bottom:0;height:calc(28.0471 * var(--dp));padding:calc(4.0118 * var(--dp)) 0 0 calc(20.0353 * var(--dp));background:#00000080;text-align:left;font:400 calc(14.0236 * var(--dp)) Roboto,sans-serif;color:#fff}
+
+/* Messenger (Google+ 2.4, audit step 4): the #292929 EsActionBar and the conversation rows on Holo light. */
+.msg24{display:flex;flex-direction:column;background:#f3f3f3}
+.msg24-bar{flex:none;display:flex;align-items:center;height:calc(48.0942 * var(--dp));background:#292929}
+.screen .msg24-bar>button:first-child{display:flex;align-items:center;height:100%;padding:0 calc(8.0118 * var(--dp)) 0 0;border:0;background:none}
+.msg24-bar img.up{width:calc(16.0353 * var(--dp));height:calc(16.0353 * var(--dp))}
+.msg24-bar>button:first-child img+img{width:calc(32.0589 * var(--dp));height:calc(32.0589 * var(--dp));margin-left:calc(3 * var(--dp))}
+.msg24-bar b{flex:1;min-width:0;font:400 calc(18.0353 * var(--dp)) Roboto,sans-serif;color:#fff;text-shadow:0 calc(1.2471 * var(--dp)) 0 #000000bb}
+.screen .msg24-act{flex:none;width:calc(56.1059 * var(--dp));height:100%;padding:0;border:0;background:none;display:grid;place-items:center}
+.msg24-act img{width:calc(32.0589 * var(--dp));height:calc(32.0589 * var(--dp))}
+.msg24-list{flex:1;overflow-y:auto}
+.screen .msg24-row{position:relative;display:flex;align-items:flex-start;width:100%;min-height:calc(64.1177 * var(--dp));padding:0;border:0;border-bottom:var(--dp) solid #0000001a;background:none;text-align:left}
+.msg24-row img{flex:none;width:calc(64.1177 * var(--dp));height:calc(64.1177 * var(--dp))}
+.msg24-row span{flex:1;min-width:0;display:flex;flex-direction:column;padding:calc(10.0236 * var(--dp)) calc(56.1059 * var(--dp)) calc(10.0236 * var(--dp)) calc(8.0118 * var(--dp))}
+.msg24-row b{font:700 calc(18.0353 * var(--dp)) Roboto,sans-serif;color:#303030;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.msg24-row small{padding-top:calc(2 * var(--dp));font:400 calc(14.0236 * var(--dp)) Roboto,sans-serif;color:#707070;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.msg24-row time{position:absolute;right:calc(16.0353 * var(--dp));top:calc(15.0236 * var(--dp));font:400 calc(12.0236 * var(--dp)) Roboto,sans-serif;color:#c0c0c0}
+/* Navigation's Contacts and Starred places pickers: Holo dark list rows (the name over the address) and the pickers'
+   empty texts; Places' search field in the bar and its finds. */
+.nav-pick{flex:1;min-height:0;overflow-y:auto;background:#000}
+.screen .nav-pick-row{display:flex;flex-direction:column;justify-content:center;width:100%;min-height:calc(64 * var(--dp));padding:calc(6 * var(--dp)) calc(16 * var(--dp));border:0;border-bottom:calc(1 * var(--dp)) solid #ffffff1f;background:none;color:#fff;text-align:left}
+.screen .nav-pick-row:active{background:#33b5e566}
+.nav-pick-row b{font-weight:400;font-size:calc(18 * var(--dp))}
+.nav-pick-row small{font-size:calc(14 * var(--dp));color:#bebebe}
+.nav-pick-empty{margin:0;padding:calc(24 * var(--dp)) calc(16 * var(--dp));font-size:calc(16 * var(--dp));color:#bebebe;white-space:pre-line}
+.loc-sv{flex:1;min-width:0;display:flex;align-items:center}
+.loc-sv input{flex:1;min-width:0;height:calc(36 * var(--dp));margin:0 calc(8 * var(--dp));padding:0 calc(4 * var(--dp));border:0;border-bottom:calc(2 * var(--dp)) solid #33b5e5;background:none;color:#000;font:400 calc(18 * var(--dp)) RobotoICS,sans-serif;outline:0}
+.loc-results{flex:1;min-height:0;overflow-y:auto}
+.screen .loc-hit{display:flex;align-items:center;width:100%;min-height:calc(56 * var(--dp));padding:0 calc(16 * var(--dp));border:0;border-bottom:calc(1 * var(--dp)) solid #0000001f;background:none;color:#000;text-align:left;font-size:calc(18 * var(--dp))}
+.screen .loc-hit:active{background:#33b5e566}
+
+/* Google+ Messenger (plus-messenger.js): conversation_activity (message_list_item_view: the 48 dp avatar on #eeeeee,
+   author, time and text), compose_message (the photo and send buttons round the field), new_conversation_activity (the
+   audience field over the contacts) and the settings on the light preference rows. */
+.gpm{display:flex;flex-direction:column;background:#fff}
+.gpm-list{flex:1;min-height:0;overflow-y:auto}
+.gpm-msg{display:flex;align-items:stretch;min-height:calc(48 * var(--dp))}
+.gpm-avatar{flex:none;width:calc(48 * var(--dp));background:#eee}
+.gpm-avatar img{display:block;width:calc(48 * var(--dp));height:calc(48 * var(--dp))}
+.gpm-body{flex:1;min-width:0;padding:calc(8 * var(--dp)) calc(16 * var(--dp)) calc(8 * var(--dp)) calc(8 * var(--dp));border-bottom:calc(1 * var(--dp)) solid #e5e5e5}
+.gpm-head{display:flex;align-items:baseline;gap:calc(4 * var(--dp))}
+.gpm-head b{flex:1;min-width:0;font:700 calc(14 * var(--dp)) Roboto,sans-serif;color:#333;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gpm-head time{flex:none;font:400 calc(12 * var(--dp)) Roboto,sans-serif;color:#999}
+.gpm-body p{margin:calc(4 * var(--dp)) 0 0;font:400 calc(16 * var(--dp)) Roboto,sans-serif;color:#000;overflow-wrap:anywhere}
+.gpm-compose{flex:none;display:flex;align-items:center;padding:calc(6 * var(--dp)) 0;border-top:1px solid #ccc;background:#fff}
+.screen .gpm-photo,.screen .gpm-send{flex:none;padding:0 calc(8 * var(--dp));border:0;background:none}
+.gpm-photo img,.gpm-send img{display:block;width:calc(32 * var(--dp));height:calc(32 * var(--dp))}
+.gpm-compose input{flex:1;min-width:0;padding:calc(6 * var(--dp)) calc(4 * var(--dp));border:0;border-bottom:calc(1 * var(--dp)) solid #bdbdbd;background:none;color:#000;font:400 calc(18 * var(--dp)) Roboto,sans-serif;outline:0}
+.gpm-compose input:focus{border-bottom:calc(2 * var(--dp)) solid #33b5e5}
+.gpm-audience{flex:none;display:flex;flex-wrap:wrap;align-items:center;gap:calc(4 * var(--dp));padding:calc(8 * var(--dp));border-bottom:1px solid #ccc}
+.gpm-audience input{flex:1;min-width:calc(120 * var(--dp));padding:calc(6 * var(--dp)) calc(4 * var(--dp));border:0;background:none;color:#000;font:400 calc(18 * var(--dp)) Roboto,sans-serif;outline:0}
+.screen .gpm-chip{border:0;padding:calc(4 * var(--dp)) calc(8 * var(--dp));background:#e5e5e5;color:#333;font:400 calc(14 * var(--dp)) Roboto,sans-serif}
+.gpm-people{flex:1;min-height:0;overflow-y:auto}
+.screen .gpm-person{display:flex;align-items:center;width:100%;padding:0;border:0;border-bottom:1px solid #e5e5e5;background:none;text-align:left}
+.screen .gpm-person.on{background:#33b5e533}
+.gpm-person[hidden]{display:none}
+.gpm-person img{flex:none;width:calc(48 * var(--dp));height:calc(48 * var(--dp))}
+.gpm-person span{flex:1;min-width:0;display:flex;flex-direction:column;padding:0 calc(12 * var(--dp))}
+.gpm-person b{font:400 calc(16 * var(--dp)) Roboto,sans-serif;color:#000}
+.gpm-person small{font:400 calc(13 * var(--dp)) Roboto,sans-serif;color:#707070}
+.gpm-empty{margin:0;padding:calc(24 * var(--dp)) calc(16 * var(--dp));text-align:center;font:400 calc(16 * var(--dp)) Roboto,sans-serif;color:#707070}
+.gpm-prefs{display:flex;flex-direction:column;background:#fff}
+.gpm-prefs .mps-cat{color:#808080;border-bottom-color:#00000026}
+
+/* Movie Studio shell (movie-studio.js): the editor bar, the preview over the storyboard, the Add menu, the picture
+   picker, the project thumbnails and the dialogs. */
+.ms43{overflow-y:auto}
+.ms-thumb>svg{position:absolute;inset:0;width:100%;height:100%}
+.screen .ms-up,.screen .ms-act{flex:none;height:100%;display:grid;place-items:center;padding:0 calc(8 * var(--dp));border:0;background:none}
+.ms-bar>b{flex:1;min-width:0;margin-left:calc(8 * var(--dp));overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:400 calc(18 * var(--dp)) Roboto,sans-serif;color:#fff}
+.ms-editor{position:relative;display:flex;flex-direction:column;background:#111}
+.ms-editor .ms-bar{position:relative}
+.ms-preview{flex:1;min-height:0;display:grid;place-items:center;margin:calc(8 * var(--dp));background:#000}
+.ms-preview svg{width:100%;height:auto;max-height:100%}
+.ms-timeline{flex:none;display:flex;align-items:center;gap:calc(4 * var(--dp));height:calc(96 * var(--dp));padding:0 calc(8 * var(--dp));overflow-x:auto;background:#222;border-top:1px solid #2d2d2d}
+.ms-clip{position:relative;flex:none;width:calc(128 * var(--dp));height:calc(72 * var(--dp));background:#000}
+.ms-clip svg,.ms-pick svg{display:block;width:100%;height:100%}
+.ms-play{position:absolute;left:50%;top:50%;width:0;height:0;margin:calc(-10 * var(--dp)) 0 0 calc(-7 * var(--dp));border:calc(10 * var(--dp)) solid transparent;border-left:calc(16 * var(--dp)) solid #fffd}
+.screen .ms-x{position:absolute;right:0;top:0;width:calc(24 * var(--dp));height:calc(24 * var(--dp));padding:0;border:0;background:#0009;color:#fff;font-size:calc(16 * var(--dp))}
+.screen .ms-addclip{flex:none;width:calc(72 * var(--dp));height:calc(72 * var(--dp));border:calc(2 * var(--dp)) dashed #555;background:none;color:#888;font-size:calc(32 * var(--dp))}
+.ms-addmenu{position:absolute;right:calc(8 * var(--dp));top:calc(48 * var(--dp));z-index:31}
+.ms-pick{position:absolute;left:calc(16 * var(--dp));right:calc(16 * var(--dp));top:50%;z-index:31;display:grid;grid-template-columns:1fr 1fr;gap:calc(4 * var(--dp));padding:calc(8 * var(--dp));transform:translateY(-50%);background:#282828}
+.screen .ms-pick button{position:relative;height:calc(90 * var(--dp));padding:0;border:0;background:#000}

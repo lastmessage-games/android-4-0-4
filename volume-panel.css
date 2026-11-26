@@ -1,0 +1,21 @@
+/* VolumePanel of the IMM76I (Galaxy Nexus) image (dp scaled by 0.9): a TYPE_VOLUME_OVERLAY window 80dp from the top, above the status bar, as wide as
+   the screen in portrait. One 64dp row: the 32dp stream icon with 16dp padding and a holo SeekBar (16dp padding, 16dp
+   end margin, 13dp track, 32dp thumb). No enter animation; it fades out over config_mediumAnimTime. */
+#volume-layer{position:absolute;left:0;right:0;top:calc(84.7059 * var(--dp));z-index:60;pointer-events:none}
+.vol-panel{pointer-events:auto;border:calc(8.4706 * var(--dp)) solid transparent;border-image:url('assets/ga-dialog_full_holo_dark.png') 20 fill/calc(10.5883 * var(--dp)) stretch}
+.vol-panel.fading{opacity:0;transition:opacity .4s cubic-bezier(.55,.085,.68,.53);pointer-events:none}
+.vol-item{display:flex;align-items:center;min-height:calc(67.7648 * var(--dp))}
+.vol-icon{flex:none;padding:calc(16.9412 * var(--dp));display:grid}
+.vol-icon img{width:calc(33.8824 * var(--dp));height:calc(33.8824 * var(--dp))}
+.vol-seek{flex:1;min-width:0;height:calc(67.7648 * var(--dp));margin-right:calc(16.9412 * var(--dp));padding:calc(16.9412 * var(--dp));display:flex;align-items:center;cursor:pointer;touch-action:none;outline:none}
+.vol-track{position:relative;flex:1;height:calc(13.7648 * var(--dp));background:url('assets/vol-scrubber_track_holo_dark.png') 0 0/100% 100%}
+.vol-progress{position:absolute;left:0;top:0;bottom:0;background:url('assets/vol-scrubber_primary_holo.png') 0 0/100% 100%}
+.vol-thumb{position:absolute;top:50%;width:calc(33.8824 * var(--dp));height:calc(33.8824 * var(--dp));margin:calc(-16.9412 * var(--dp)) 0 0 calc(-16.9412 * var(--dp));background:url('assets/vol-scrubber_control_normal_holo.png') center/100% 100%}
+.vol-seek.pressed .vol-thumb{background-image:url('assets/vol-scrubber_control_pressed_holo.png')}
+.vol-seek.disabled{cursor:default}
+.vol-seek.disabled .vol-track{opacity:.5}
+.vol-seek.disabled .vol-thumb{background-image:url('assets/vol-scrubber_control_disabled_holo.png')}
+.volume-rocker{cursor:pointer;z-index:1}
+.volume-rocker::before{content:"";position:absolute;inset:-4px -4px -4px -10px}
+.header-actions .volume-key svg{width:17px;height:17px;vertical-align:-3px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:420px){.back-link [data-i18n]{display:none}.header-actions{gap:6px}}
